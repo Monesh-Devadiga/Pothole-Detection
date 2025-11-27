@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PotVision | Deep Learning Detection</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Deep Learning + Civic Engagement</p>
+      <h1>PotVision</h1>
+      <p class="lede">Real-time pothole detection, citizen reporting, and proactive driver alerts backed by a deep learning inference pipeline.</p>
+      <button id="scrollToObjectives">See Objectives</button>
+    </div>
+    <div class="hero-card">
+      <p class="stat-label">Critical Alerts (24h)</p>
+      <p class="stat-value" id="criticalCount">--</p>
+      <p class="stat-footnote">Streaming from AI detections + citizen reports</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="objectives">
+      <h2>Program Objectives</h2>
+      <div class="cards">
+        <article>
+          <h3>1. Enriched AI Reports</h3>
+          <p>Automatically generate detailed pothole analytics (severity, surface area, bounding boxes) and push alerts to city engineers and maintenance crews.</p>
+        </article>
+        <article>
+          <h3>2. Public Coverage</h3>
+          <p>Offer a public portal for residents to flag missed potholes, attach imagery, and track acknowledgement to ensure city-wide coverage.</p>
+        </article>
+        <article>
+          <h3>3. Driver Safety</h3>
+          <p>Deliver upcoming hazard warnings to drivers and collect telemetry for congestion planning, cutting accident risk and improving traffic flow.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article>
+        <h2>Upload for AI Detection</h2>
+        <p>Drop a road image to run it through the Pothole-Net deep learning model. High-severity detections trigger an automatic authority alert.</p>
+        <form id="detectionForm">
+          <label>Road Photo
+            <input type="file" name="image" accept="image/*" required>
+          </label>
+          <label>Latitude
+            <input type="number" name="lat" step="0.000001" placeholder="12.9716">
+          </label>
+          <label>Longitude
+            <input type="number" name="lng" step="0.000001" placeholder="77.5946">
+          </label>
+          <button type="submit">Run Detection</button>
+        </form>
+        <div id="detectionResult" class="panel"></div>
+      </article>
+
+      <article>
+        <h2>Manual Report (Public Portal)</h2>
+        <form id="reportForm">
+          <label>Name
+            <input type="text" name="name" required>
+          </label>
+          <label>Contact (email/phone)
+            <input type="text" name="contact" required>
+          </label>
+          <label>Address / Landmark
+            <input type="text" name="address" required>
+          </label>
+          <label>Description
+            <textarea name="description" rows="3" required></textarea>
+          </label>
+          <label>Latitude
+            <input type="number" name="lat" step="0.000001">
+          </label>
+          <label>Longitude
+            <input type="number" name="lng" step="0.000001">
+          </label>
+          <label>Image URL (optional)
+            <input type="url" name="imageUrl" placeholder="https://">
+          </label>
+          <button type="submit">Submit Report</button>
+        </form>
+        <div id="reportStatus" class="panel"></div>
+      </article>
+    </section>
+
+    <section>
+      <h2>Live Alerts & Coverage</h2>
+      <div class="grid">
+        <article>
+          <h3>Authority Alerts</h3>
+          <ul id="alertFeed"></ul>
+        </article>
+        <article>
+          <h3>Recent Reports</h3>
+          <ul id="reportFeed"></ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 PotVision. Built for resilient, safer roads.</p>
+  </footer>
+
+  <script src="scripts/app.js" type="module"></script>
+</body>
+
+</html>
