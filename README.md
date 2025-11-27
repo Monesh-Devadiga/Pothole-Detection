@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PotVision
 
 PotVision is a deep-learning inspired pothole detection stack that fuses AI-driven analytics, public reporting, and proactive driver alerts. The system fulfils three key objectives:
@@ -50,3 +51,7 @@ Features:
 - Replace the simulated detectorService with a TensorFlow/Torch inference module.
 - Connect alertService to SMS/email gateways.
 - Add authentication for authority dashboards and citizen report follow-up.
+=======
+# Pothole-Detection
+To detect pothole and send alert.
+>>>>>>> ae8aed7af05f9a382b3dde29527889c6016364d0
