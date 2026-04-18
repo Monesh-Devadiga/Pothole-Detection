@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS detections (
     meta JSON,
     created_at TEXT DEFAULT (datetime('now'))
 );    
-  
+   
 CREATE TABLE IF NOT EXISTS reports (
     id TEXT PRIMARY KEY,
     reporter_name TEXT,
