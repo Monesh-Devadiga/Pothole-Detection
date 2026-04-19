@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS alerts
 );
 
 CREATE TABLE IF NOT EXISTS telemetry 
-    (
+(
     id TEXT PRIMARY KEY,
     vehicle_id TEXT,
     location_lat REAL,
