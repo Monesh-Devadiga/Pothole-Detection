@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS detections
 );
 
 CREATE TABLE IF NOT EXISTS reports 
-    (
+(
     id TEXT PRIMARY KEY,
     reporter_name TEXT,
     contact TEXT,
