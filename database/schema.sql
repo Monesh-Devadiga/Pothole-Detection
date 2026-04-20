@@ -29,8 +29,7 @@ CREATE TABLE IF NOT EXISTS reports(
     created_at TEXT DEFAULT (datetime('now'))
 );
 
-CREATE TABLE IF NOT EXISTS alerts 
-(
+CREATE TABLE IF NOT EXISTS alerts (
     id TEXT PRIMARY KEY,
     detection_id TEXT,
     report_id TEXT,
