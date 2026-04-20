@@ -3,8 +3,7 @@ PRAGMA foreign_keys = ON;
 
 
 -- This is the tabale defenition to store reported potholes.
-CREATE TABLE IF NOT EXISTS detections 
-(
+CREATE TABLE IF NOT EXISTS detections (
     id TEXT PRIMARY KEY,
     source TEXT NOT NULL,
     location_lat REAL,
