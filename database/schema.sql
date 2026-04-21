@@ -37,7 +37,6 @@ CREATE TABLE IF NOT EXISTS alerts(
     FOREIGN KEY (detection_id) REFERENCES detections(id),
     FOREIGN KEY (report_id) REFERENCES reports(id)
 );
-
 CREATE TABLE IF NOT EXISTS telemetry(
     id TEXT PRIMARY KEY,
     vehicle_id TEXT,
