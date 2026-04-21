@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS reports(
     image_url TEXT,
     created_at TEXT DEFAULT (datetime('now'))
 );
+
 CREATE TABLE IF NOT EXISTS alerts(
     id TEXT PRIMARY KEY,
     detection_id TEXT,
