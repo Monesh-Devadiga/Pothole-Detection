@@ -55,3 +55,7 @@ Features:
 # Pothole-Detection
 To detect pothole and send alert.
 >>>>>>> ae8aed7af05f9a382b3dde29527889c6016364d0
+
+---------------------------------------------------------------------------------------------------------------------
+Created By: 
+  [@Monesh Devadiga](https://github.com/Monesh-Devadiga)
